@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+// IMPORTATION DES PARTIALS
+@import 'assets/styles/partials/colors';
+@import 'assets/styles/partials/typo';
+@import 'assets/styles/partials/generale';
+@import 'assets/styles/partials/header';
+@import 'assets/styles/partials/footer';
+// FIN PARTIAL
+@import 'assets/styles/enigme.scss';
+@import 'assets/styles/home.scss';
+@import 'assets/styles/wakanda.scss';
+* {
+    box-sizing: content-box !important;
+}

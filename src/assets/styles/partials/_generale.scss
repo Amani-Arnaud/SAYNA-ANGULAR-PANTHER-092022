@@ -1,0 +1,151 @@
+/* Definition de style global */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "panthera";
+    font-size: 68px;
+    font-style: regular;
+    color: var(--white-violet-1);
+    margin: 10px 0px;
+}
+
+h2,
+h3 {
+    font-family: "beyno";
+    font-size: 32px;
+    font-style: regular;
+    color: var(--white-violet-1);
+}
+
+p {
+    font-family: "cantarell";
+    font-size: 14px;
+    color: var(--white-primaire);
+}
+
+body {
+    background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);
+}
+
+.btn-form {
+    font-family: "cantarell";
+    font-style: bold;
+    width: 174px;
+    height: 54px;
+    border-radius: 38px;
+    color: var(--violet-tertiaire);
+    border: 0;
+    background-color: var(--white-primaire);
+}
+
+
+/* ### POPUP BOX  */
+
+.box-popup {
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background: linear-gradient(to bottom, #3D2DA6 10%, #021740 100%);
+    .popup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 80%;
+        border-radius: 25px;
+        background: linear-gradient(to bottom, #9E91B7 30%, #3D2DA6 100%);
+        p {
+            text-transform: uppercase;
+            font-family: "cantarell";
+            font-size: 20px;
+        }
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: var(--viloet-tertiaire);
+            background-color: var(--white-primaire);
+            border-radius: 25px;
+            padding: 15px 20px;
+            margin: 50px 0px;
+        }
+        .chrono {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            #hour {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// ########################################################
+// ################ REPONSIVE POPUP ######################
+@media (max-width: 800px) {
+    .box-popup {
+        top: 15%;
+        left: 5%;
+        width: 90%;
+        height: 70%;
+    }
+}
+
+
+/* FIN POPUP  */
+
+// SOCIAL LOGO HEADER
+.social-logo-header {
+    position: absolute;
+    top: 0;
+    left: 2.5%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid var(--white-violet-1);
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 0;
+    .ligne {
+        height: 40vh;
+        border: 1px solid var(--white-violet-1);
+    }
+    .icon-social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        img {
+            margin: 0px;
+            margin: 10px 10px;
+            padding-top: 5px;
+        }
+    }
+}
+
+// FIN
+// Propriété Canvas
+#div-canvas {
+    z-index: 2;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    // cursor: none;
+}
+
+// Fin canvas
+
+/* Fin de style global */

@@ -1,0 +1,200 @@
+/* FEUILLE DE STYLE SPECIALEMENT POUR LA PAGE ENIGME */
+
+
+/* Proprieté globale */
+
+p,
+label {
+    font-size: 14px;
+    margin: 20px 0px;
+    color: white;
+}
+
+
+/* FIN propriete global */
+
+
+/* Propriété CSS section defi */
+
+#defi {
+    background-image: url("../images/3_Page_Enigme/Pantherenigme1.png");
+    background-size: 75%;
+    background-position: bottom left -20%;
+    background-repeat: no-repeat;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    .card-defi {
+        width: 650px;
+        .titre-defi {
+            font-size: 54px;
+            text-align: justify;
+            width: 550px;
+            margin: 45px 10px;
+            letter-spacing: 0.09em;
+        }
+        .texte-defi {
+            .paragraphe {
+                background-image: url("../images/3_Page_Enigme/Pantherenigme2.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                height: 385px;
+                width: 95%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: justify;
+                justify-content: center;
+                p {
+                    width: 70%;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+//  Fin section defi
+
+/* Propriété css section Enigme */
+
+.main-enigme {
+    margin-left: 15%;
+    .entete {
+        text-decoration: underline;
+        letter-spacing: 0.25em;
+        line-height: 50px;
+        // width: 70%;
+    }
+    .content-enigme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 150px;
+        .info-enigme {
+            background-image: url("../images/3_Page_Enigme/Pantherenigme2_1.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 385px;
+            width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                width: 70%;
+                font-size: 11px;
+                margin: 2px auto;
+                .titre-info {
+                    display: block;
+                    text-align: center;
+                }
+                // margin-bottom: 5px;
+                // margin: 5px;
+                // span {
+                //     display: block;
+                //     margin-bottom: 20px;
+                // }
+            }
+        }
+    }
+}
+
+.alphabet span {
+    font-family: "WakandaForever" !important;
+}
+
+.transcription {
+    width: 500px;
+    .panthera-letter {
+        font-family: "WakandaForever";
+        font-size: 28px;
+        color: var(--white-violet-1);
+        line-height: 40px;
+    }
+    form {
+        margin-top: 50px;
+        input[type=text] {
+            width: 520px;
+            height: 56px;
+            border: 1px solid #DF99F2;
+            border-radius: 38px;
+            padding-left: 30px;
+            margin: 20px 0px;
+            background-color: #ffffff00;
+            color: var(--white-primaire);
+        }
+        .btn-enigme {
+            margin-left: 180px;
+            margin-top: 50px;
+            &:hover {
+                filter: drop-shadow(0 0 20px var(--white-primaire));
+            }
+        }
+    }
+}
+
+//  Fin section Enigme
+// ###################################################################### 
+//  ######################## PROPRIETE RESPONSIVE ######################## 
+// ###################################################################### 
+@media (max-width: 800px) {
+    /* DEFINIR LES PROPRIETE RESPONSIVE A PARTIR D'ECRAN DE 800PX */
+    #defi {
+        background-size: contain;
+        background-position: center;
+        height: auto;
+        margin: 100px 0px;
+        justify-content: center;
+        .card-defi {
+            width: 90%;
+            margin: 0;
+            .titre-defi {
+                font-size: 48px;
+                width: auto;
+                text-align: center;
+                margin: auto;
+                .paragraphe {
+                    background-size: contain;
+                    background-position: center;
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .main-enigme {
+        margin-left: 0%;
+        .entete {
+            letter-spacing: 0.25em;
+            width: 100%;
+            text-align: center;
+        }
+        .content-enigme {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-bottom: 150px;
+            .info-enigme {
+                background-size: contain;
+                background-position: center;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .transcription {
+        width: 90%;
+        margin: auto;
+        form {
+            margin-top: 50px;
+            input[type=text] {
+                width: 100%;
+                padding: 0;
+            }
+            .btn-enigme {
+                margin: auto;
+            }
+        }
+    }
+}

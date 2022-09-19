@@ -1,0 +1,297 @@
+/* FEUILLE DE STYLE SPECIALEMENT POUR LA PAGE INDEX */
+
+
+/* Propriete de la section black panther */
+
+.section-panther {
+    background-image: url("../images/1_Landing_page/Pantherhome1..png");
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    .intro-panther {
+        margin-left: 12%;
+        .sous-titre {
+            margin-bottom: 25px;
+        }
+        .texte-intro {
+            display: block;
+            width: 500px;
+            margin-bottom: 10px;
+        }
+        a {
+            color: var(--white-primaire);
+            font-family: "cantarell";
+        }
+    }
+}
+
+//  Fin intro black panther
+// Propriete section slide hero 
+.container-slides {
+    margin-left: 5%;
+    background-color: var(--violet-tertiaire);
+    display: flex;
+    .cards {
+        display: flex;
+        align-items: center;
+        height: 300px;
+        img {
+            width: 295px;
+            height: 300px;
+        }
+        .img-active {
+            width: 386px;
+            height: 346px;
+            margin-left: 40px;
+        }
+        .decription-slide {
+            clear: left;
+            margin-top: 30px;
+            margin: 0px 30px;
+            .titre-slide {
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+            .texte-slide {
+                text-align: justify;
+                margin-bottom: 10px;
+            }
+            a {
+                color: var(--white-primaire);
+                font-family: "cantarell";
+            }
+        }
+    }
+}
+
+#section-slide {
+    position: relative;
+}
+
+.box-btn-next {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right, #ffffff00, #000000);
+    height: 300px;
+    width: 200px;
+    .btn-next-slide {
+        text-decoration: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        background-color: var(--violet-tertiaire);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            box-shadow: 0px 0px 5px 5px var(--white);
+        }
+    }
+}
+
+//  Fin section slide hero 
+//  Propriete Section naissance du prince 
+#dob-prince {
+    padding-left: 10%;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    .contenu-text {
+        width: 600px;
+        h3 {
+            margin: 20px 0px;
+            font-size: 20px;
+        }
+        p span {
+            display: block;
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 0.8em;
+        }
+    }
+    .presentation {
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .img-panther {
+            margin-bottom: 50px;
+            width: 80%;
+        }
+        .profil {
+            width: 400px;
+            background-color: var(--white-primaire);
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 40%;
+            text-align: center;
+            img {
+                margin-top: -60%;
+                width: 80%;
+                /* width: 374px;
+                height: 527px; */
+            }
+            .btn-profil {
+                display: inline-block;
+                text-decoration: none;
+                font-size: 10px;
+                border-radius: 5px;
+                font-family: "cantarell";
+                background-color: var(--violet-primaire);
+                color: var(--white);
+                padding: 10px 15px;
+                margin: 10px;
+            }
+            .biographie {
+                text-align: left;
+                width: 80%;
+                margin: auto;
+                margin-bottom: 100px;
+                p {
+                    span {
+                        display: block;
+                        margin: 10px;
+                        color: var(--violet-tertiaire);
+                    }
+                    .detail {
+                        font-size: 0.8em;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  Fin Section naissance du prince 
+
+/* Section CONTACT  */
+
+#contact {
+    background-image: url("../images/1_Landing_page/Pantherhome4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 10%;
+    .contact-main {
+        margin: auto;
+        width: 500px;
+        height: 500px;
+        background-image: linear-gradient(to bottom, var(--white), rgba(255, 255, 255, 0.1));
+        border-radius: 150px;
+        text-align: center;
+        padding: 50px 200px;
+        .question,
+        .titre {
+            font-size: 14px;
+            font-family: "cantarell";
+            color: var(--violet-tertiaire);
+        }
+        .titre {
+            font-size: 40px !important;
+            margin-bottom: 20px;
+        }
+        input[type=text],
+        input[type=email],
+        textarea {
+            width: 80%;
+            margin: 10px 0px;
+            background-color: #FFFFFF00;
+            border: 1px solid var(--violet-tertiaire);
+            height: 48px;
+            padding-left: 20px;
+            border-radius: 28px;
+            resize: none;
+        }
+        textarea {
+            height: 200px;
+        }
+        .btn-index:hover {
+            filter: drop-shadow(0 0 20px var(--violet-tertiaire));
+        }
+    }
+}
+
+// fin section CONTACT
+//  FIN PAGE INDEX 
+//  Fin de style main
+//  ######################################################################
+//  ######################## PROPRIETE RESPONSIVE ######################## 
+//  ###################################################################### 
+@media (max-width: 800px) {
+    /* ####### RESPONSIVE SPECIFIQUE A LA PAGE INDEX ######## */
+    /* Propriete Responsive de la section black panther */
+    .section-panther .intro-panther {
+        margin: auto;
+        width: 90%;
+        text-align: center;
+        /* margin: 100px 0px; */
+        .texte-intro {
+            display: block;
+            width: auto;
+        }
+    }
+    /* Fin  */
+    /* style responsive  section slide hero */
+    .container-slides {
+        margin-left: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .card {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 90%;
+            height: auto;
+            text-align: center;
+            margin-bottom: 20px;
+            img {
+                width: 80%;
+            }
+            .img-active {
+                height: auto;
+                transform: none;
+            }
+        }
+    }
+    /* Fin section slide hero */
+    /* Propriete responsive Section naissance du prince */
+    #dob-prince {
+        padding: 0;
+        padding-top: 10%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        .presentation {
+            margin: auto;
+            width: 90%;
+            margin-top: 300px;
+            .profil {
+                width: 90%;
+            }
+        }
+        .contenu-text {
+            width: 90%;
+        }
+    }
+    /* Fin Section naissance du prince */
+    /* Responsive Section CONTACT  */
+    #contact .contact-main {
+        width: 90%;
+        height: auto;
+        border-radius: 100px;
+        padding: 20px 0px;
+    }
+    /* fin section CONTACT */
+}
