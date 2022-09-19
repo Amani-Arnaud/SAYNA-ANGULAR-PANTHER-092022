@@ -8,5 +8,5 @@ respecter le cadre de la mission.
 Une fois votre travail rendu, vous serez évalué pour valider les compétences de base
 en JS/TS, Angular et confirmer votre motivation à poursuivre votre apprentissage.
 
-## TEMPS REPARTI
+## TEMPS IMPARTI
 lUNDI 19 SEPTEMBRE => SAMEDI 24 SEPTEMBRE 2022
