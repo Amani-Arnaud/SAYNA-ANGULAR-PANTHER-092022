@@ -10,6 +10,16 @@
     align-items: center;
 }
 
+#account {
+    background-image: url("../images/4_Eshop/bg_1.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
 .intro-wakanda {
     margin: auto;
     width: 80%;
@@ -81,6 +91,12 @@
     /* DEFINIR LES PROPRIETE RESPONSIVE A PARTIR D'ECRAN DE 800PX */
     #wakanda {
         background-image: url("../images/2_Wakanda_page/Pantherwakanda1.png");
+        background-size: cover;
+        background-position: center;
+        margin-top: 10px;
+    }
+    #account {
+        background-image: url("../images/4_Eshop/bg_1.jpg");
         background-size: cover;
         background-position: center;
         margin-top: 10px;

@@ -1,38 +1,29 @@
 /* Propriete style header  */
 
-header {
+.logo-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    width: 80%;
-    margin: auto;
-    height: 100px;
-    .logo-header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        img {
-            margin: 5px;
-        }
+    img {
+        margin: 5px;
     }
-    .menu {
-        .active {
-            text-decoration: underline;
-            color: var(--violet-secondaire);
-        }
-        ul li {
-            display: inline-block;
-            margin: 25px;
-            a {
-                text-decoration: none;
-                font-family: "beyno";
-                font-size: 20px;
-                font-style: regular;
-                color: var(--white);
-                &:hover {
-                    text-decoration: underline;
-                    color: var(--violet-secondaire);
-                }
+}
+
+.menu {
+    .active {
+        text-decoration: underline !important;
+        color: var(--violet-secondaire) !important;
+    }
+    ul li {
+        margin: 10px !important;
+        a {
+            font-family: "beyno" !important;
+            font-size: 20px !important;
+            font-style: regular;
+            color: var(--white) !important;
+            &:hover {
+                text-decoration: underline !important;
+                color: var(--violet-secondaire) !important;
             }
         }
     }
@@ -40,21 +31,3 @@ header {
 
 
 /* Fin style Header */
-
-
-/* ######################## PROPRIETE RESPONSIVE ######################## */
-
-@media (max-width: 800px) {
-    /* feuille de style menu */
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .menu ul li {
-            display: block;
-            margin: 20px;
-            text-align: center;
-        }
-    }
-    /* Fin menu  */
-}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-not-found-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titlePage: Title,
+  ) { }
 
   ngOnInit(): void {
+    this.titlePage.setTitle("Page introuvable | BLACK PANTHER");
   }
 
 }

@@ -25,12 +25,12 @@ window.onload = function() {
     $("h2").on({
         mouseenter: function() {
             $(this).animate({
-                fontSize: 42,
+                fontSize: '+=10px',
             });
         },
         mouseleave: function() {
             $(this).animate({
-                fontSize: 32,
+                fontSize: '-=10px',
             });
         },
     });

@@ -10,6 +10,8 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'enigme', component:EnigmeComponent},
   {path:'wakanda', component:WakandaComponent},
+  { path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
+  { path: 'eshop', loadChildren: () => import('./eshop/eshop.module').then(m => m.EshopModule) },
 
   {path:'**', component:NotFoundPageComponent},
 ];

@@ -31,10 +31,9 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [{
-    provide: LOCALE_ID,
-    useValue: 'fr-CI'
-  }],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-CI' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
