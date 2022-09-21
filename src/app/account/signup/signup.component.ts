@@ -34,11 +34,13 @@ export class SignupComponent implements OnInit {
   }
 
   signUp(): void{
-    this.service.signup(this.signupFromData).subscribe((res:any) => {
-      alert('Utilisateur enrégistré' + res);
+    if (this.service.signup(this.signupFromData.value)) {
+      alert('Utilisateur enrégistré');
       this.signupFromData.reset();
       this.router.navigateByUrl('account/login');
-    });
+    } else {
+      alert('Formulaire non envoyé');
+    }
   }
 
 }

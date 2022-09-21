@@ -20,7 +20,7 @@ export class EshopServiceService {
   }
 
   // Fonction pour recuperer un prodduit
-  getProductId(id:number){
+  getOneProduct(id:number){
     //
     return this.http.get<any>(API_LINKS.ALL_PRODUCTS + '/' + id).pipe(map((res)=>{
       return res;
@@ -33,5 +33,30 @@ export class EshopServiceService {
     return this.http.get<any>(API_LINKS.ALL_PRODUCTS + '/?category=' + category).pipe(map((res)=>{
       return res;
     }));
+  }
+
+  // fonction ajouter au panier
+  addToCart(data:any){
+    try {
+      this.http.post<any>(API_LINKS.CART_URL, data).subscribe((result) => {});
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  getItemCart(){
+    return this.http.get<any>(API_LINKS.CART_URL).pipe(map((res)=>{
+      return res;
+    }));
+  }
+
+  removeItemToCart(productId: any){
+    try {
+      this.http.delete<any>(API_LINKS.CART_URL, productId).subscribe((result)=> {});
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 }

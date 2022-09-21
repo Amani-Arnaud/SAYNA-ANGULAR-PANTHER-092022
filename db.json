@@ -1,23 +1,217 @@
 {
     "clients": [{
-        "id": 1,
-        "name": "json-server",
-        "lastname": "json-server",
-        "username": "black-panther",
-        "email": "hub@gmail.com",
-        "phone": "+22501748596",
-        "address": "typicode",
-        "password": "1223"
-    }],
+            "id": 1,
+            "name": "json-server",
+            "lastname": "json-server",
+            "username": "black-panther",
+            "email": "hub@gmail.com",
+            "phone": "+22501748596",
+            "address": "typicode",
+            "password": "1223"
+        },
+        {
+            "name": "monsieur",
+            "lastname": "pierre",
+            "username": "pierre",
+            "email": "pierre@gmail.com",
+            "phone": "225 89 63 29",
+            "address": "France Paris",
+            "password": "12345678",
+            "id": 2
+        },
+        {
+            "name": "monsieur",
+            "lastname": "hermann",
+            "username": "hermann",
+            "email": "g@hmai.com",
+            "phone": "222222",
+            "address": "2536",
+            "password": "12345678",
+            "id": 3
+        }
+    ],
     "products": [{
-        "id": 1,
-        "image": "article_1.jpg",
-        "name": "SWEAT \"WHY SO SERIOUS\"",
-        "category": "TEE-SHIRT",
-        "price": "20",
-        "quantity": "20",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "color": "NOIR"
-    }],
+            "id": 1,
+            "image": "article_1.jpg",
+            "name": "SWEAT \"WHY SO SERIOUS\"",
+            "category": "VETEMENT",
+            "price": "20",
+            "quantity": "20",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            "color": "NOIR"
+        },
+        {
+            "id": 2,
+            "image": "article_2.jpg",
+            "name": "SAC AU DOS BLACK PANTHER NOIR",
+            "category": "SAC",
+            "price": "32",
+            "quantity": "2",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            "color": "NOIR"
+        },
+        {
+            "id": 3,
+            "image": "article_3.JPG",
+            "name": "MONTRE HOMME BLACK PANTHER",
+            "category": "GADGET",
+            "price": "102",
+            "quantity": "25",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+            "color": "ARGENT"
+        },
+        {
+            "id": 4,
+            "image": "article_4.jpg",
+            "name": "T-Shirt Crossfit",
+            "category": "VETEMENT",
+            "price": "72",
+            "quantity": "55",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+            "color": "NOIR"
+        },
+        {
+            "id": 5,
+            "image": "article_5.jpg",
+            "name": "SAC A DOS",
+            "category": "SAC",
+            "price": "52",
+            "quantity": "15",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            "color": "NOIR"
+        },
+        {
+            "id": 6,
+            "image": "article_6.jpg",
+            "name": "TASSE A CAFE WAKANDA",
+            "category": "GADGET",
+            "price": "36",
+            "quantity": "5",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            "color": "BLANC"
+        },
+        {
+            "id": 7,
+            "image": "article_7.jpg",
+            "name": "ECOUTEUR BLUETOOTH",
+            "category": "GADGET",
+            "price": "16",
+            "quantity": "51",
+            "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+            "color": "BLANC"
+        },
+        {
+            "id": 8,
+            "image": "article_8.jpg",
+            "name": "ENSEMBLE VETEMENT BLACK PANTHER",
+            "category": "VETEMENT",
+            "price": "16",
+            "quantity": "51",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+            "color": "NOIR"
+        },
+        {
+            "id": 9,
+            "image": "article_12.jpg",
+            "name": "SAC A DOS & BANDOULIERE",
+            "category": "SAC",
+            "price": "26",
+            "quantity": "51",
+            "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+            "color": "NOIR"
+        },
+        {
+            "id": 10,
+            "image": "article_13.jpg",
+            "name": "AFFICHE CINEMA",
+            "category": "GADGET",
+            "price": "6",
+            "quantity": "51",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            "color": "BLEU"
+        },
+        {
+            "id": 11,
+            "image": "article_15.jpg",
+            "name": "GOURDE SCOLAIRE POUR ENFANT",
+            "category": "GADGET",
+            "price": "6",
+            "quantity": "51",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+            "color": "TRANSPARENT"
+        }
+    ],
+    "comments": [{
+            "id": "1",
+            "notes": "5",
+            "contenu": "Mon cadeau préféré",
+            "clientId": "1",
+            "productId": "5"
+        },
+        {
+            "id": "2",
+            "notes": "4",
+            "contenu": "Excellent",
+            "clientId": "2",
+            "productId": "7"
+        },
+        {
+            "id": "3",
+            "notes": "3",
+            "contenu": "Trop bien",
+            "clientId": "3",
+            "productId": "10"
+        },
+        {
+            "id": "4",
+            "notes": "5",
+            "contenu": "J'adore",
+            "clientId": "4",
+            "productId": "11"
+        },
+        {
+            "id": "5",
+            "notes": "4",
+            "contenu": "Je recommande",
+            "clientId": "5",
+            "productId": "8"
+        },
+        {
+            "id": "6",
+            "notes": "4",
+            "contenu": "Bonne qualité",
+            "clientId": "6",
+            "productId": "9"
+        },
+        {
+            "id": "7",
+            "notes": "5",
+            "contenu": "J'ai adoré",
+            "clientId": "1",
+            "productId": "5"
+        },
+        {
+            "id": "8",
+            "notes": "4",
+            "contenu": "Mon préféré",
+            "clientId": "2",
+            "productId": "4"
+        },
+        {
+            "id": "9",
+            "notes": "3",
+            "contenu": "Mon article favoris",
+            "clientId": "3",
+            "productId": "3"
+        },
+        {
+            "id": "10",
+            "notes": "5",
+            "contenu": "Satisfait ",
+            "clientId": "4",
+            "productId": "3"
+        }
+    ],
+    "carts": [],
     "users": []
 }

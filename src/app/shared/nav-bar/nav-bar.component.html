@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse menu" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link " routerLink="home" routerLinkActive="active"> ACCUEIL </a>
+                    <a class="nav-link" routerLink="home" routerLinkActive="active"> ACCUEIL </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="wakanda" routerLinkActive="active"> WAKANDA </a>
@@ -24,10 +24,16 @@
                 <li class="nav-item ">
                     <a class="nav-link " routerLink="eshop" routerLinkActive="active"> ESHOP </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link " routerLink="account" routerLinkActive="active"> MON COMPTE </a>
+                <li class="nav-item " *ngIf="isUserLoggedIn;else login">
+                    <a class="nav-link " routerLink="account" routerLinkActive="active"> MON COMPTE( {{user}}) </a>
                 </li>
-
+                <ng-template #login>
+                    <li>
+                        <a class="nav-link " routerLink="account/login" routerLinkActive="active">
+                            <i class="fa-solid fa-user-circle text-white"></i>
+                        </a>
+                    </li>
+                </ng-template>
             </ul>
         </div>
     </div>
