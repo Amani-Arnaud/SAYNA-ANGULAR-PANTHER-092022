@@ -6,3 +6,4 @@ export const CLIENT_URL = BASE_URL_API + "clients";
 export const COMMENTS = BASE_URL_API + "comments";
 export const SIGIN_URL = BASE_URL_API + "clients";
 export const CART_URL = BASE_URL_API + "carts";
+export const IMAGE_URL = APP_URL + "assets/images/4_Eshop/";

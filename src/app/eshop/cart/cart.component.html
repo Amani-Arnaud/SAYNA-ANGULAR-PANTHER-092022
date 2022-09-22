@@ -1,1 +1,59 @@
-<p>cart works!</p>
+<div class="container pb-5" *ngIf="products?.length != 0">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">
+                <a routerLink="/eshop">E-Shop</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="text-white">
+                    Panier
+                </a>
+            </li>
+        </ol>
+    </nav>
+    <p>Votre du panier </p>
+
+    <div class="row align-self-center w-75 mx-auto" *ngFor="let productItem of products | paginate: { itemsPerPage: 4, currentPage: pageCart }">
+        <div class="row col-md-6 align-self-center p-3">
+            <div class="col-md">
+                <img class="img-thumbnail rounded-start" src="assets/images/4_Eshop/{{productItem?.image}}" alt="{{productItem.name}}">
+            </div>
+            <div class="col-md-8 align-self-center">
+                <div class="card-body">
+                    <h5 class="card-title text-white"> {{productItem?.name}} </h5>
+                    <p class="card-text text-warning">Numéro de produit <strong>PA000{{productItem?.id}}</strong></p>
+                    <!-- PA : Panther Article-->
+                </div>
+            </div>
+        </div>
+        <div class="row col-md d-flex justify-content-end align-self-center">
+            <div class="col-md-4 text-end">
+                <h6 class="fs-3 text-secondary"> {{productItem?.price | currency: 'EUR'}} </h6>
+            </div>
+            <div class="col-md-4 text-end d-flex justify-content-center">
+                <button class="bg-transparent border-0"><i class="fa-sharp fa-solid fa-2x fa-circle-minus text-white"></i></button>
+                <input type="number" name="qty" id="qty" class="text-end w-25" value="1">
+                <button class="bg-transparent border-0"><i class="fa-sharp fa-solid fa-2x fa-circle-plus text-white"></i></button>
+            </div>
+            <div class="col-md text-end">
+                <button class="bg-transparent border-0" (click)="removeArticle(productItem?.id)">
+                    <i class="fa-solid fa-2x fa-circle-xmark text-danger" ></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="pageCart = $event" previousLabel="Precedent." nextLabel="Suivant" class="text-white text-center"></pagination-controls>
+
+
+    <p class="text-end fs-2">TOTAL : {{totalAmount | currency: 'EUR' }}</p>
+
+    <div class="container text-center">
+        <button class="btn-form btn-enigme text-uppercase w-25 " [routerLink]="['/eshop']">CONTINUER mes ACHATS</button>
+        <button class="btn-form btn-enigme text-uppercase w-25 ms-3" [routerLink]="['/eshop/order']">PASSER LA COMMANDE</button>
+    </div>
+</div>
+
+<div class="container contour mx-auto text-center py-5" *ngIf="products?.length == 0">
+    <p class="fs-2 text-center"> Ton panier est vide</p>
+    <button [routerLink]="['/eshop']" class="btn-form btn-enigme text-uppercase w-75"> Faire des Achats</button>
+</div>

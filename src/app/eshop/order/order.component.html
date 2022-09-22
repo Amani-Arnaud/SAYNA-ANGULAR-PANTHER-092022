@@ -1,0 +1,146 @@
+<!-- La div principale -->
+<div class="container ">
+    <h1 class="fs-5 my-5">passer votre commande</h1>
+    <div class="row">
+        <!-- div Inscription  -->
+        <div class="col-md-6 mt-5 me-1">
+            <div class="container">
+                <div class="card bg-transparent border border-primary mb-3">
+                    <div class="card-header border border-primary">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active bg-primary text-white " aria-current="true">Inscription</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Connexion</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="align-items-center">
+                            <div class="rounded mx-auto">
+                                <div class="entete-form mx-auto">
+                                    <p class="fs-4 text-center">Inscription</p>
+                                    <!-- <p class="text-center fs-5">Vous avez déjà un compte ? <a [routerLink]="['account/login']" class="text-white">  Connectez vous ici </a></p> -->
+                                </div>
+                                <div class="form mx-auto mb-3 p-2">
+                                    <form>
+                                        <div class="form-group mb-3 ">
+                                            <label for="name" class="form-label text-white my-2">Nom</label>
+                                            <div class="input-group ">
+                                                <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
+                                                    <i class="fa-regular fa-user fa-2x"></i>
+                                                </span>
+                                                <input formControlName="name" type="text" class="form-control bg-transparent text-white border-start-0 " id="name" placeholder="Nom" aria-describedby="basic-addon3">
+                                            </div>
+                                            <span class="text-warning" *ngIf="signupFromData.controls['name'].dirty && signupFromData.hasError('required','name')">* Ce champ est requis</span>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="lastname" class="form-label text-white my-2">Prenom</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
+                                        <i class="fa-solid fa-user-large fa-2x"></i>
+                                    </span>
+                                                <input formControlName="lastname" type="text" class="form-control bg-transparent text-white border-start-0" id="lastname" placeholder="Prenom" aria-describedby="basic-addon3">
+                                            </div>
+                                            <span class="text-warning" *ngIf="signupFromData.controls['lastname'].dirty && signupFromData.hasError('required','lastname')">* Ce champ est requis</span>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="username" class="form-label text-white my-2">Nom d'utilisateur</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
+                                        <i class="fa-solid fa-user-circle fa-2x"></i>
+                                    </span>
+                                                <input formControlName="username" type="text" class="form-control bg-transparent text-white border-start-0" id="username" placeholder="Username" aria-describedby="basic-addon3">
+                                            </div>
+                                            <span class="text-warning" *ngIf="signupFromData.controls['username'].dirty && signupFromData.hasError('required','username')">* Ce champ est requis</span>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="phone" class="form-label text-white my-2">Téléphone</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
+                                        <i class="fa-solid fa-phone fa-2x"></i>
+                                    </span>
+                                                <input formControlName="phone" type="text" class="form-control bg-transparent text-white border-start-0" id="phone" placeholder="Ex: 225 02 014 052" aria-describedby="basic-addon3">
+                                            </div>
+                                            <span class="text-warning" *ngIf="signupFromData.controls['phone'].dirty && signupFromData.hasError('required','phone')">* Ce champ est requis</span>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="email" class="form-label text-white my-2">Email</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
+                                        <i class="fa-regular fa-envelope fa-2x"></i>
+                                    </span>
+                                                <input formControlName="email" type="email" class="form-control bg-transparent text-white border-start-0" id="email" placeholder="email@gmail.com" aria-describedby="basic-addon3">
+                                            </div>
+                                            <span class="text-warning" *ngIf="signupFromData.controls['email'].dirty && signupFromData.hasError('required','email')">* Ce champ est requis</span>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="address" class="form-label text-white my-2">Adresse</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
+                                        <i class="fa-solid fa-map-location-dot fa-2x"></i>
+                                    </span>
+                                                <textarea formControlName="address" name="address" id="address" cols="3" rows="3" placeholder="Votre addresse" aria-describedby="basic-addon3" class="form-control bg-transparent text-white border-start-0"></textarea>
+                                            </div>
+                                            <span class="text-warning" *ngIf="signupFromData.controls['address'].dirty && signupFromData.hasError('required','address')">* Ce champ est requis</span>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="password" class="form-label text-white my-2">Mot de Passe</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
+                                        <i class="fa-solid fa-lock fa-2x"></i>
+                                    </span>
+                                                <input formControlName="password" type="password" class="form-control bg-transparent text-white border-start-0" id="password" placeholder="Mot de passe" aria-describedby="basic-addon3">
+                                            </div>
+                                            <span class="text-warning" *ngIf="signupFromData.controls['password'].dirty && signupFromData.hasError('required','password')">* Ce champ est requis</span>
+                                        </div>
+                                        <div class="d-flex justify-content-center mb-5">
+                                            <button class="btn btn-primary mx-auto w-50 p-3 ">SOUMETTRE</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- div resumé panier -->
+        <div class="col-md mt-5 ms-1">
+            <p class="fs-4 text-uppercase">Mes Commandes</p>
+            <hr style="size: 10px; color: white; ">
+            <div class="row mt-3">
+                <div class="card mb-3 w-100 bg-transparent border border-primary" *ngFor="let item of products | paginate: { itemsPerPage: 3, currentPage: page }">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="assets/images/4_Eshop/{{item?.image}}" class="img-fluid rounded-start py-2" alt="{{item?.name}}" style="max-width: 150px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title text-white text-uppercase">{{item?.name}}</h5>
+                                <p class="card-text text-truncate">ID: PA000{{item?.id}}</p>
+                                <p class="card-text fs-5 text-muted"> Prix: <strong class="text-warning">{{item?.price | currency: 'EUR'}}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <pagination-controls (pageChange)="page = $event" previousLabel="Precedent." nextLabel="Suivant" class="text-white text-center"></pagination-controls>
+                <hr style="size: 10px; color: white; ">
+                <div class="">
+                    <p class="fs-2">
+                        Total:
+                        <strong class="float-end text-warning">{{totalAmount | currency: 'EUR' }}</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

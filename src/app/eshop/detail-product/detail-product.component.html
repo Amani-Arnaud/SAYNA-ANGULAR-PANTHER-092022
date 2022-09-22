@@ -13,7 +13,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md">
+            <div class="col-md-6">
                 <div class="card mb-3 bg-transparent">
                     <div class="row g-0">
                         <div class="col-md-8" style="width: 90%;">
@@ -42,7 +42,7 @@
                 <h1> {{ product?.name }} </h1>
                 <hr style="size: 10px; color: white; ">
                 <div class="row">
-                    <h3 class="col-md-8 text-white"> {{ product?.price | currency: 'EUR'}}</h3>
+                    <p class="col-md-8 text-white fs-3">Prix: <strong>{{ product?.price | currency: 'EUR'}}</strong></p>
                     <div class="col-md float-end d-flex justify-content-between ">
                         <a class="text-white w-25 "> En stock</a>
                         <select class="form-select bg-transparent text-white mx-2 " aria-label="Default select example ">
@@ -71,42 +71,38 @@
 
     <hr style="size: 10px; color: white; ">
 
-    <div class="container m-5">
+    <div class="container py-5">
         <h1 class="fs-4 mb-5">Produits simulaire</h1>
         <div id="productSimular" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="2000">
                     <div class="card mx-auto bg-transparent border border-secondary" style="width: 18rem;">
-                        <img src="assets/images/4_Eshop/article_2.jpg" class="card-img-top" alt="...">
+                        <img src="assets/images/4_Eshop/{{product?.image}}" class="card-img-top" [alt]="product?.name">
                         <div class="card-body">
-                            <h1 class="card-title fs-5 text-secondary">Nom du produit</h1>
-                            <p class="card-text text-center">Description Description Description Description Description</p>
+                            <h1 class="card-title fs-5 text-secondary w-100 text-center">{{ product?.name }}</h1>
+                            <p class="card-text text-center text-truncate">{{product?.description}}</p>
+                            <p class="card-text fs-4 text-center text-danger ">Prix: <strong> {{product?.price | currency: 'EUR' }} </strong> </p>
                             <div class="d-flex justify-content-center align-items-end">
-                                <button class="btn-form btn-enigme">Detail</button>
+                                <!-- <button class="btn-form btn-enigme" (click)="viewSimular(simular.id)">Voir</button> -->
+                                <a class="btn-form btn-enigme text-decoration-none d-flex justify-content-center align-items-center" href="/eshop/detail-product/{{product?.id}}">
+                                    <span>Voir</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="2000">
+                <div class="carousel-item " data-bs-interval="2000" *ngFor="let simular of simularProducts">
                     <div class="card mx-auto bg-transparent border border-secondary" style="width: 18rem;">
-                        <img src="assets/images/4_Eshop/article_5.jpg" class="card-img-top" alt="...">
+                        <img src="assets/images/4_Eshop/{{simular?.image}}" class="card-img-top" [alt]="simular?.name">
                         <div class="card-body">
-                            <h1 class="card-title fs-5 text-secondary">Nom du produit</h1>
-                            <p class="card-text text-center">Description Description Description Description Description</p>
+                            <h1 class="card-title fs-5 text-secondary w-100 text-center">{{ simular?.name }}</h1>
+                            <p class="card-text text-center text-truncate">{{simular?.description}}</p>
+                            <p class="card-text fs-4 text-center text-danger ">Prix: <strong> {{simular?.price | currency: 'EUR' }} </strong> </p>
                             <div class="d-flex justify-content-center align-items-end">
-                                <button class="btn-form btn-enigme">Detail</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <div class="card mx-auto bg-transparent border border-secondary" style="width: 18rem;">
-                        <img src="assets/images/4_Eshop/article_6.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h1 class="card-title fs-5 text-secondary">Nom du produit</h1>
-                            <p class="card-text text-center">Description Description Description Description Description</p>
-                            <div class="d-flex justify-content-center align-items-end">
-                                <button class="btn-form btn-enigme">Detail</button>
+                                <!-- <button class="btn-form btn-enigme" (click)="viewSimular(simular.id)">Voir</button> -->
+                                <a class="btn-form btn-enigme text-decoration-none d-flex justify-content-center align-items-center" href="/eshop/detail-product/{{simular.id}}">
+                                    <span>Voir</span>
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import * as api_link from '../util-links';
 import { EshopServiceService } from './services/eshop-service.service';
-
+import { Product } from '../models/product.model';
 @Component({
   selector: 'app-eshop',
   templateUrl: './eshop.component.html',
@@ -37,7 +36,7 @@ export class EshopComponent implements OnInit {
         this.products = result;
       });
     } else {
-      this.serviceEshop.getSimularProducts(category).subscribe((result)=>{
+      this.serviceEshop.getSimularProducts(category,0).subscribe((result)=>{
         this.products = result;
       });
     }
@@ -45,7 +44,8 @@ export class EshopComponent implements OnInit {
 
   // ajouter un article au panier
   addItemToCart(product:any){
-    if (this.serviceEshop.addToCart(product)) {
+    let insertProduct = new Product(product);
+    if (this.serviceEshop.addToCart(insertProduct)) {
       // message pour Item bien ajouté
       this.serviceEshop.getItemCart().subscribe((result)=>{
         this.cartItems = result;

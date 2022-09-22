@@ -28,9 +28,9 @@ export class EshopServiceService {
   }
 
   // fonction pour recuperer les produits simulaires
-  getSimularProducts(category:string){
+  getSimularProducts(category:string, currentProductId:number){
     //
-    return this.http.get<any>(API_LINKS.ALL_PRODUCTS + '/?category=' + category).pipe(map((res)=>{
+    return this.http.get<any>(API_LINKS.ALL_PRODUCTS + '/?category=' + category + '&id_ne='+ currentProductId).pipe(map((res)=>{
       return res;
     }));
   }
@@ -45,18 +45,22 @@ export class EshopServiceService {
     }
   }
 
+  //fonction pour ajouter au panier
   getItemCart(){
     return this.http.get<any>(API_LINKS.CART_URL).pipe(map((res)=>{
       return res;
     }));
   }
 
+  //fonction pour suprimer du panier
   removeItemToCart(productId: any){
+    console.log(API_LINKS.CART_URL + '/' + productId);
     try {
-      this.http.delete<any>(API_LINKS.CART_URL, productId).subscribe((result)=> {});
+      this.http.delete<any>(API_LINKS.CART_URL + '/' + productId).subscribe((result)=> {});
       return true;
     } catch (error) {
       return false;
     }
   }
+  
 }

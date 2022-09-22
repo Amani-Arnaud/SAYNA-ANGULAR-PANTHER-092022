@@ -7,13 +7,15 @@ import { EshopComponent } from './eshop.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { CartComponent } from './cart/cart.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { OrderComponent } from './order/order.component';
 
 
 @NgModule({
   declarations: [
     EshopComponent,
     DetailProductComponent,
-    CartComponent
+    CartComponent,
+    OrderComponent
   ],
   imports: [
     CommonModule,

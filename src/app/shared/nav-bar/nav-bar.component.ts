@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountServiceService } from 'src/app/account/services/account-service.service';
+import * as UTIL_LINKS from 'src/app/util-links';
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,7 +12,7 @@ export class NavBarComponent implements OnInit {
   isUserLoggedIn = false;
   user:any = 'GUEST';
 
-  constructor(private loginService: AccountServiceService) { }
+  constructor(private loginService: AccountServiceService,) { }
 
   ngOnInit(): void {
     let storeData = localStorage.getItem("isUserLoggedIn");
@@ -21,6 +22,14 @@ export class NavBarComponent implements OnInit {
     } else {
       this.isUserLoggedIn = false
     }
+  }
+
+  loadLangingPage(){
+    window.location.href = UTIL_LINKS.APP_URL + "home";
+  }
+
+  loadEnigmePage(){
+    window.location.href = UTIL_LINKS.APP_URL + "enigme";
   }
 
 }
