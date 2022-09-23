@@ -1,0 +1,102 @@
+/* Definition style footer */
+
+footer {
+    background: linear-gradient(to bottom, #3D2DA6 0%, #021740 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+    .logo-footer {
+        background-image: url("../../images/Group\ 2052.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 385px;
+        width: 330px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+    }
+    .policies {
+        display: flex;
+        flex-direction: column;
+        height: 385px;
+        margin-left: 50px;
+        .link {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .titre {
+                font-family: "cantarell";
+                font-size: 22px;
+                color: var(--white);
+                letter-spacing: 0.28em;
+                margin-bottom: 25px;
+            }
+            .pages ul li {
+                display: block;
+                margin-bottom: 10px;
+                a {
+                    text-decoration: none;
+                    font-family: "cantarell";
+                    font-size: 16px;
+                    color: var(--white);
+                }
+            }
+            .social .social-logo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img:hover {
+                    /* zoom: 1.1; */
+                    transform: scale(1.10);
+                }
+            }
+        }
+        .condition-right {
+            text-decoration: none;
+            font-family: "cantarell";
+            font-size: 14px;
+            color: var(--white);
+            align-items: center;
+            margin-top: 100px;
+            p span {
+                font-family: " sans-serif";
+                font-size: 5em;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+/* Fin style footer */
+
+
+/* ######################## PROPRIETE RESPONSIVE ######################## */
+
+@media (max-width: 800px) {
+    /* feuille de style footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .policies {
+            margin: 0px;
+            height: auto;
+            .link {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .pages,
+                .social {
+                    margin: 20px 0px;
+                }
+            }
+            .condition-right {
+                margin-top: 10px;
+            }
+        }
+    }
+    /* fin footer */
+}

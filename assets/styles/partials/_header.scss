@@ -1,0 +1,33 @@
+/* Propriete style header  */
+
+.logo-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+        margin: 5px;
+    }
+}
+
+.menu {
+    .active {
+        text-decoration: underline !important;
+        color: var(--violet-secondaire) !important;
+    }
+    ul li {
+        margin: 10px !important;
+        a {
+            font-family: "beyno" !important;
+            font-size: 20px !important;
+            font-style: regular;
+            color: var(--white) !important;
+            &:hover {
+                text-decoration: underline !important;
+                color: var(--violet-secondaire) !important;
+            }
+        }
+    }
+}
+
+
+/* Fin style Header */

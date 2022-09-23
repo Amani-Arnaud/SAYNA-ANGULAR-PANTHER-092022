@@ -1,0 +1,123 @@
+/* Definition feuille de style section wakanda */
+
+#wakanda {
+    background-image: url("../images/2_Wakanda_page/Pantherwakanda1.png");
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#account {
+    background-image: url("../images/4_Eshop/bg_1.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.intro-wakanda {
+    margin: auto;
+    width: 80%;
+    text-align: left;
+    .titre-wakanda {
+        font-size: 58px;
+        margin-bottom: 5px;
+        /* letter-spacing: 0.10em; */
+    }
+    .soustitre-wakanda {
+        font-family: "WakandaForever";
+        color: #9E91B7;
+        font-size: 40px;
+        /* letter-spacing: 0.10em; */
+        margin-bottom: 40px;
+    }
+    .text-wakanda {
+        display: block;
+        width: 400px;
+        text-align: justify;
+    }
+}
+
+// # Fin section introduction wakanda 
+
+/* Definition feuille de style section apropos */
+
+#apropos {
+    background-image: url("../images/2_Wakanda_page/Pantherwakanda2.png");
+    background-position: 0% -10%;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 7% 10%;
+    p span {
+        display: block;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    h2 {
+        margin: 20px 0px;
+        font-size: 20px;
+    }
+}
+
+.left-apropos,
+.right-apropos {
+    width: 550px;
+}
+
+.left-apropos .videos-container {
+    width: 100%;
+    height: 220px;
+    background-color: var(--violet-primaire);
+    margin: 50px 0px;
+}
+
+.right-apropos img {
+    width: 100%;
+}
+
+//  fin section apropos 
+//  ###################################################################### 
+//  ######################## PROPRIETE RESPONSIVE ######################## 
+//  ###################################################################### 
+@media (max-width: 800px) {
+    /* DEFINIR LES PROPRIETE RESPONSIVE A PARTIR D'ECRAN DE 800PX */
+    #wakanda {
+        background-image: url("../images/2_Wakanda_page/Pantherwakanda1.png");
+        background-size: cover;
+        background-position: center;
+        margin-top: 10px;
+    }
+    #account {
+        background-image: url("../images/4_Eshop/bg_1.jpg");
+        background-size: cover;
+        background-position: center;
+        margin-top: 10px;
+    }
+    .intro-wakanda {
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        .text-wakanda {
+            width: auto;
+            text-align: justify;
+        }
+    }
+    #apropos {
+        display: flex;
+        flex-direction: column;
+        padding: 7% 0%;
+    }
+    .left-apropos,
+    .right-apropos {
+        margin: auto;
+        width: 90%;
+    }
+}
