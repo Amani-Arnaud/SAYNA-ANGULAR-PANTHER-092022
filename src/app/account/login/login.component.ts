@@ -30,10 +30,15 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void{
-    console.log("user: " + this.loginForm.value.username);
     this.service.login().subscribe((result) => {
       const user = result.find((client: any) => {
-        return (client.username === this.loginForm.value.username && client.password === this.loginForm.value.password);
+        if (client.username === this.loginForm.value.username && client.password === this.loginForm.value.password) {
+            localStorage.setItem('user', JSON.stringify(client));
+            // console.log('user ' + JSON.parse(localStorage.getItem('user') || '{}').id);
+          return true;
+        } else {
+          return false;
+        }
       });
       if (user) {
         this.service.isUserLoggedIn = true;

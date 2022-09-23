@@ -5,14 +5,16 @@ export class User {
     private email: string;
     private phone: string;
     private address: string;
+    private password: string;
 
-    constructor(name: string, lastname: string, username: string, email: string, phone: string, address: string){
-        this.name = name;
-        this.lastname = lastname;
-        this.username = username;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
+    constructor(data: any){
+        this.name = data.name;
+        this.lastname = data.lastname;
+        this.username = data.username;
+        this.email = data.email;
+        this.phone = data.phone;
+        this.address = data.address;
+        this.password = data.password;
     }
 
 }

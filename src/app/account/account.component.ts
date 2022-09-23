@@ -9,12 +9,15 @@ import { AccountServiceService } from './services/account-service.service';
 })
 export class AccountComponent implements OnInit {
 
+  public userData: any;
+
   constructor(
     private titlePage: Title,
     private authService: AccountServiceService
   ) { }
 
   ngOnInit(): void {
+    this.userData = JSON.parse(localStorage.getItem('user') || '{}');
     this.titlePage.setTitle("Mon Compte | BLACK PANTHER")
   }
 

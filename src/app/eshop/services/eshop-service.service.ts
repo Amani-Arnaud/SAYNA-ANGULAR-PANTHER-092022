@@ -62,5 +62,44 @@ export class EshopServiceService {
       return false;
     }
   }
+
+  // fonction vider le panier
+  truncateCart(){
+    try {
+      this.http.delete<any>(API_LINKS.CART_URL).subscribe((result)=> {});
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
   
+  // signup user anonyme
+  signupAnonymous(data:any){
+      try {
+        this.http.post<any>(API_LINKS.SIGNUP_URL, data).subscribe((result) => {});
+        return true;
+      } catch (error) {
+        return false;
+      }
+  }
+
+  // enregistrement d'une commande
+  storeOrder(data:any){
+    try {
+      this.http.post<any>(API_LINKS.ORDER_URL, data).subscribe((result)=>{});
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  // enregistrement des articles de la commande
+  storeArticles(data:any){
+    try {
+      this.http.post<any>(API_LINKS.ARTICLES_URL, data).subscribe((res)=>{});
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
 }

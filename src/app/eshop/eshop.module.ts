@@ -8,7 +8,7 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
 import { CartComponent } from './cart/cart.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { OrderComponent } from './order/order.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { OrderComponent } from './order/order.component';
   imports: [
     CommonModule,
     EshopRoutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-CI' },

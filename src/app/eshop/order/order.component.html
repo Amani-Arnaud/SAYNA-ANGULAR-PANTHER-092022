@@ -24,14 +24,14 @@
                                     <!-- <p class="text-center fs-5">Vous avez déjà un compte ? <a [routerLink]="['account/login']" class="text-white">  Connectez vous ici </a></p> -->
                                 </div>
                                 <div class="form mx-auto mb-3 p-2">
-                                    <form>
+                                    <form [formGroup]="signupFromData" (ngSubmit)="signupUser()">
                                         <div class="form-group mb-3 ">
                                             <label for="name" class="form-label text-white my-2">Nom</label>
                                             <div class="input-group ">
                                                 <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
                                                     <i class="fa-regular fa-user fa-2x"></i>
                                                 </span>
-                                                <input formControlName="name" type="text" class="form-control bg-transparent text-white border-start-0 " id="name" placeholder="Nom" aria-describedby="basic-addon3">
+                                                <input formControlName="name" type="text" class="form-control bg-transparent text-white border-start-0 " id="name" placeholder="Nom" aria-describedby="basic-addon3" required>
                                             </div>
                                             <span class="text-warning" *ngIf="signupFromData.controls['name'].dirty && signupFromData.hasError('required','name')">* Ce champ est requis</span>
                                         </div>
@@ -40,9 +40,9 @@
                                             <label for="lastname" class="form-label text-white my-2">Prenom</label>
                                             <div class="input-group">
                                                 <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
-                                        <i class="fa-solid fa-user-large fa-2x"></i>
-                                    </span>
-                                                <input formControlName="lastname" type="text" class="form-control bg-transparent text-white border-start-0" id="lastname" placeholder="Prenom" aria-describedby="basic-addon3">
+                                                    <i class="fa-solid fa-user-large fa-2x"></i>
+                                                </span>
+                                                <input formControlName="lastname" type="text" class="form-control bg-transparent text-white border-start-0" id="lastname" placeholder="Prenom" aria-describedby="basic-addon3" required>
                                             </div>
                                             <span class="text-warning" *ngIf="signupFromData.controls['lastname'].dirty && signupFromData.hasError('required','lastname')">* Ce champ est requis</span>
                                         </div>
@@ -51,9 +51,9 @@
                                             <label for="username" class="form-label text-white my-2">Nom d'utilisateur</label>
                                             <div class="input-group">
                                                 <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
-                                        <i class="fa-solid fa-user-circle fa-2x"></i>
-                                    </span>
-                                                <input formControlName="username" type="text" class="form-control bg-transparent text-white border-start-0" id="username" placeholder="Username" aria-describedby="basic-addon3">
+                                                    <i class="fa-solid fa-user-circle fa-2x"></i>
+                                                </span>
+                                                <input formControlName="username" type="text" class="form-control bg-transparent text-white border-start-0" id="username" placeholder="Username" aria-describedby="basic-addon3" required>
                                             </div>
                                             <span class="text-warning" *ngIf="signupFromData.controls['username'].dirty && signupFromData.hasError('required','username')">* Ce champ est requis</span>
                                         </div>
@@ -62,9 +62,9 @@
                                             <label for="phone" class="form-label text-white my-2">Téléphone</label>
                                             <div class="input-group">
                                                 <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
-                                        <i class="fa-solid fa-phone fa-2x"></i>
-                                    </span>
-                                                <input formControlName="phone" type="text" class="form-control bg-transparent text-white border-start-0" id="phone" placeholder="Ex: 225 02 014 052" aria-describedby="basic-addon3">
+                                                    <i class="fa-solid fa-phone fa-2x"></i>
+                                                </span>
+                                                <input formControlName="phone" type="text" class="form-control bg-transparent text-white border-start-0" id="phone" placeholder="Ex: 225 02 014 052" aria-describedby="basic-addon3" required>
                                             </div>
                                             <span class="text-warning" *ngIf="signupFromData.controls['phone'].dirty && signupFromData.hasError('required','phone')">* Ce champ est requis</span>
                                         </div>
@@ -73,9 +73,9 @@
                                             <label for="email" class="form-label text-white my-2">Email</label>
                                             <div class="input-group">
                                                 <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
-                                        <i class="fa-regular fa-envelope fa-2x"></i>
-                                    </span>
-                                                <input formControlName="email" type="email" class="form-control bg-transparent text-white border-start-0" id="email" placeholder="email@gmail.com" aria-describedby="basic-addon3">
+                                                    <i class="fa-regular fa-envelope fa-2x"></i>
+                                                </span>
+                                                <input formControlName="email" type="email" class="form-control bg-transparent text-white border-start-0" id="email" placeholder="email@gmail.com" aria-describedby="basic-addon3" required>
                                             </div>
                                             <span class="text-warning" *ngIf="signupFromData.controls['email'].dirty && signupFromData.hasError('required','email')">* Ce champ est requis</span>
                                         </div>
@@ -84,9 +84,9 @@
                                             <label for="address" class="form-label text-white my-2">Adresse</label>
                                             <div class="input-group">
                                                 <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
-                                        <i class="fa-solid fa-map-location-dot fa-2x"></i>
-                                    </span>
-                                                <textarea formControlName="address" name="address" id="address" cols="3" rows="3" placeholder="Votre addresse" aria-describedby="basic-addon3" class="form-control bg-transparent text-white border-start-0"></textarea>
+                                                    <i class="fa-solid fa-map-location-dot fa-2x"></i>
+                                                </span>
+                                                <textarea formControlName="address" name="address" id="address" cols="3" rows="3" placeholder="Votre addresse" aria-describedby="basic-addon3" class="form-control bg-transparent text-white border-start-0" required></textarea>
                                             </div>
                                             <span class="text-warning" *ngIf="signupFromData.controls['address'].dirty && signupFromData.hasError('required','address')">* Ce champ est requis</span>
                                         </div>
@@ -95,14 +95,14 @@
                                             <label for="password" class="form-label text-white my-2">Mot de Passe</label>
                                             <div class="input-group">
                                                 <span class="input-group-text bg-transparent text-white border-end-0 p-2" id="basic-addon3">
-                                        <i class="fa-solid fa-lock fa-2x"></i>
-                                    </span>
-                                                <input formControlName="password" type="password" class="form-control bg-transparent text-white border-start-0" id="password" placeholder="Mot de passe" aria-describedby="basic-addon3">
+                                                    <i class="fa-solid fa-lock fa-2x"></i>
+                                                </span>
+                                                <input formControlName="password" type="password" class="form-control bg-transparent text-white border-start-0" id="password" placeholder="Mot de passe" aria-describedby="basic-addon3" required>
                                             </div>
                                             <span class="text-warning" *ngIf="signupFromData.controls['password'].dirty && signupFromData.hasError('required','password')">* Ce champ est requis</span>
                                         </div>
                                         <div class="d-flex justify-content-center mb-5">
-                                            <button class="btn btn-primary mx-auto w-50 p-3 ">SOUMETTRE</button>
+                                            <button class="btn-form btn-enigme mx-auto w-50">PASSER LA COMMANDE</button>
                                         </div>
                                     </form>
                                 </div>
@@ -126,7 +126,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title text-white text-uppercase">{{item?.name}}</h5>
-                                <p class="card-text text-truncate">ID: PA000{{item?.id}}</p>
+                                <p class="card-text text-truncate">ID: PA000{{item?.productId}}</p>
                                 <p class="card-text fs-5 text-muted"> Prix: <strong class="text-warning">{{item?.price | currency: 'EUR'}}</strong></p>
                             </div>
                         </div>
@@ -144,3 +144,14 @@
         </div>
     </div>
 </div>
+<!-- fin div principale -->
+
+<!-- Message success order -->
+<!-- popup box -->
+<div class="box-popup" id="box-popup" *ngIf="ordered">
+    <div class="popup">
+        <p>Commande passée avec succès </p>
+        <a id="ok_message" [routerLink]="['/eshop']" routerLinkActive="router-link-active"> Faire des achats</a>
+    </div>
+</div>
+<!-- End success order -->

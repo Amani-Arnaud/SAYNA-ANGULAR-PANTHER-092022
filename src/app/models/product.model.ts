@@ -1,4 +1,5 @@
 export class Product {
+    private productId: number;
     private image: string;
     private name: string;
     private category: string;
@@ -11,12 +12,13 @@ export class Product {
         data: any,
     )
     {
-            this.image = data.image;
-            this.name = data.name;
-            this.category = data.category;
-            this.price = data.price;
-            this.quantity = data.quantity;
-            this.description = data.description;
-            this.color = data.color;
+        this.productId = +data.id
+        this.image = data.image;
+        this.name = data.name;
+        this.category = data.category;
+        this.price = data.price;
+        this.quantity = data.quantity;
+        this.description = data.description;
+        this.color = data.color;
     }
 }

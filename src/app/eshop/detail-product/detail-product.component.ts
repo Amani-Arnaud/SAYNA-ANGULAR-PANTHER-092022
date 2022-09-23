@@ -41,8 +41,8 @@ export class DetailProductComponent implements OnInit {
 
   // ajouter un article au panier
   addToCart(product:any){
-    let addingProduct = new Product(product)
-    if (this.service.addToCart(product)) {
+    let addingProduct = new Product(product);
+    if (this.service.addToCart(addingProduct)) {
       // message pour Item bien ajouté
       this.router.navigateByUrl("/eshop/cart");
       
